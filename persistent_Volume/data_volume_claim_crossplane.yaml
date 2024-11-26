@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data-pvc-crossplane
+  namespace: crossplane-system
+spec:
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  storageClassName: local-storage
+  resources:
+    requests:
+      storage: 5Gi
+  volumeName: data-pv-crossplane
