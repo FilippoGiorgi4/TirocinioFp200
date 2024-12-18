@@ -13,8 +13,12 @@ RUN apt-get update && apt-get install -y \
     unzip \
     sudo \
     patchelf \
+    libjson-c-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+# Installazione di pip
+RUN python3 -m pip install --upgrade pip --break-system-packages
 
 # Copia il codice sorgente nella directory di lavoro
 WORKDIR /usr/src/app
