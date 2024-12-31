@@ -24,3 +24,6 @@ RUN python3 -m pip install --upgrade pip --break-system-packages
 WORKDIR /usr/src/app
 COPY . .
 
+# Sposta libtensorflowlite_c.so e imposta LD_LIBRARY_PATH
+RUN mv /usr/src/app/deploy_methods/tensorflow_lite_c/mnist/libtensorflowlite_c.so /usr/local/lib/ \
+    && echo 'export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH' >> /etc/profile.d/ld_library_path.sh

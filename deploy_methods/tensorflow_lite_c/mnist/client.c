@@ -17,7 +17,7 @@
 #include <sys/stat.h>
 #include <json-c/json.h>
 
-#define PORT 8080
+#define PORT 30080 //porta del nodeport
 
 int leggiLinea(int fd, char *linea) {
     char c;
@@ -48,9 +48,16 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    // Risoluzione del nome del servizio in indirizzo IP
+    struct hostent *server = gethostbyname("deployment-mnist-service.namespace.svc.cluster.local");
+    if (server == NULL) {
+        fprintf(stderr, "ERROR: No such host\n");
+        return 1;
+    }
+
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
-    server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    memcpy(&server_addr.sin_addr.s_addr, server->h_addr, server->h_length);
 
     // Connessione al server
     if (connect(sock, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
@@ -59,6 +66,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    printf("Connesso a server\n");
     printf("Apro file\n");
     // Apertura del file CSV
     int fd = open(file_path, O_RDONLY, 0777);

@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
     /* INIZIALIZZAZIONE INDIRIZZO SERVER ----------------------------------------- */
     memset((char *)&server_addr, 0, sizeof(server_addr));
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(8080);
+    server_addr.sin_port = htons(30080);
     server_addr.sin_addr.s_addr = INADDR_ANY;
 
     /* CREAZIONE E SETTAGGI SOCKET TCP --------------------------------------- */
@@ -284,6 +284,7 @@ int main(int argc, char **argv) {
 
                 free(predictions);
                 fclose(data_file);
+		remove("x_test.csv");
                 // Libera la memoria dell'interprete e del modello
                 TfLiteInterpreterDelete(interpreter);
                 TfLiteInterpreterOptionsDelete(options);
