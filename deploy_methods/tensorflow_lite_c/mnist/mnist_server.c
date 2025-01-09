@@ -62,7 +62,9 @@ int main(int argc, char **argv) {
     }
 
     struct sockaddr_in server_addr, client_addr;
-    int                port, nread, server_fd, client_fd, length;
+    int                port, nread, server_fd, client_fd, length, tot = 0, bf=0;
+    int sndbuf, rcvbuf;
+    char buff[8192];
     const int          on = 1;
     const char *model_path = argv[1];
     char a_capo='\n';
@@ -89,7 +91,6 @@ int main(int argc, char **argv) {
     }
     printf("Server: set opzioni socket d'ascolto ok\n");
 
-    int sndbuf, rcvbuf;
     socklen_t optlen = sizeof(int);
     getsockopt(server_fd, SOL_SOCKET, SO_SNDBUF, &sndbuf, &optlen);
     getsockopt(server_fd, SOL_SOCKET, SO_RCVBUF, &rcvbuf, &optlen);
@@ -129,199 +130,153 @@ int main(int argc, char **argv) {
             } else
                 printf("Server (figlio): host client e' %s \n", hostTcp->h_name);
 
-                // Carica il modello TensorFlow Lite
-                TfLiteModel *model = TfLiteModelCreateFromFile(model_path);
-                if (model == NULL) {
-                    fprintf(stderr, "Failed to load model\n");
-                    return 1;
+            // Carica il modello TensorFlow Lite
+            TfLiteModel *model = TfLiteModelCreateFromFile(model_path);
+            if (model == NULL) {
+                fprintf(stderr, "Failed to load model\n");
+                return 1;
+            }
+            printf("Modello caricato correttamente\n");
+
+            TfLiteInterpreterOptions *options = TfLiteInterpreterOptionsCreate();
+            TfLiteInterpreterOptionsSetNumThreads(options, 1); // Parametro thread utilizzati
+            TfLiteXNNPackDelegateOptions xnnpack_options = TfLiteXNNPackDelegateOptionsDefault();
+            TfLiteDelegate *xnnpack_delegate = TfLiteXNNPackDelegateCreate(&xnnpack_options);
+
+            // Enable XNNPACK
+            TfLiteInterpreterOptionsAddDelegate(options, xnnpack_delegate);
+
+            // Crea l'interprete del modello
+            TfLiteInterpreter *interpreter = TfLiteInterpreterCreate(model, options);
+            if (interpreter == NULL) {
+                fprintf(stderr, "Failed to create interpreter\n");
+                return 1;
+            }
+            printf("Interpreter creato correttamente\n");
+
+            // Alloca i tensori dell'interprete
+            if (TfLiteInterpreterAllocateTensors(interpreter) != kTfLiteOk) {
+                fprintf(stderr, "Failed to allocate tensors\n");
+                return 1;
+            }
+            printf("Tensori allocati correttamente\n");
+
+            // Ottieni i tensori di input e output
+            TfLiteTensor *input_tensor = TfLiteInterpreterGetInputTensor(interpreter, 0);
+            if (input_tensor == NULL) {
+                fprintf(stderr, "Failed to get input tensor\n");
+                return 1;
+            }
+            printf("Input tensor ottenuto\n");
+
+            // Leggi il file x_test.csv inviato dal client
+            FILE* x_test_file = fopen("/var/data/ml_model_prova/x_test.csv", "wb");
+            if(x_test_file != NULL){
+                while( (bf = recv(client_fd, buff, 8192,0))> 0 ) {
+                    tot+=bf;
+                    fwrite(buff, 1, bf, x_test_file);
                 }
-                printf("Modello caricato correttamente\n");
 
-                TfLiteInterpreterOptions *options = TfLiteInterpreterOptionsCreate();
-                TfLiteInterpreterOptionsSetNumThreads(options, 1); // Parametro thread utilizzati
-                TfLiteXNNPackDelegateOptions xnnpack_options = TfLiteXNNPackDelegateOptionsDefault();
-                TfLiteDelegate *xnnpack_delegate = TfLiteXNNPackDelegateCreate(&xnnpack_options);
-
-                // Enable XNNPACK
-                TfLiteInterpreterOptionsAddDelegate(options, xnnpack_delegate);
-
-                // Crea l'interprete del modello
-                TfLiteInterpreter *interpreter = TfLiteInterpreterCreate(model, options);
-                if (interpreter == NULL) {
-                    fprintf(stderr, "Failed to create interpreter\n");
-                    return 1;
-                }
-                printf("Interpreter creato correttamente\n");
-
-                // Alloca i tensori dell'interprete
-                if (TfLiteInterpreterAllocateTensors(interpreter) != kTfLiteOk) {
-                    fprintf(stderr, "Failed to allocate tensors\n");
-                    return 1;
-                }
-                printf("Tensori allocati correttamente\n");
-
-                // Ottieni i tensori di input e output
-                TfLiteTensor *input_tensor = TfLiteInterpreterGetInputTensor(interpreter, 0);
-                if (input_tensor == NULL) {
-                    fprintf(stderr, "Failed to get input tensor\n");
-                    return 1;
-                }
-                printf("Input tensor ottenuto\n");
-
-                char buff[8192];
-                int tot = 0, bf=0;
-                FILE* x_test_file = fopen("/var/data/ml_model_prova/x_test.csv", "wb");
-                if(x_test_file != NULL){
-                    while( (bf = recv(client_fd, buff, 8192,0))> 0 ) {
-                        tot+=bf;
-                        fwrite(buff, 1, bf, x_test_file);
-		    }
-
-                    printf("Received byte: %d\n",tot);
-                    if (bf<0)
+                printf("Received byte: %d\n",tot);
+                if (bf<0)
                     perror("Receiving");
 
-                    fclose(x_test_file);
-                } else {
-                    perror("File");
-                }
-                // Leggi il file x_test.csv inviato dal client
-               /* int x_test_file = open("/var/data/ml_model_prova/x_test.csv", O_WRONLY | O_CREAT | O_TRUNC, 0777);
-                if (x_test_file < 0) {
-                    perror("Failed to open file");
-                    return 1;
-                }
-                printf("File x_test.csv aperto correttamente\n");*/
+                fclose(x_test_file);
+            } else {
+                perror("File");
+            }
+            
+            printf("Dati ricevuti e scritti su x_test.csv\n");
 
-                /*while (recv(client_fd, &length, sizeof(int), 0) > 0) {
-                    if (length == -1) {
-                        // Esco dal ciclo di gestione di questo file
-                        // senza però chiudere la socket.
-                        break;
+            // Riapri il file x_test.csv per leggere i dati
+            FILE *data_file = fopen("/var/data/ml_model_prova/x_test.csv", "r");
+            if (!data_file) {
+                perror("Failed to open file");
+                return 1;
+            }
+            printf("File x_test.csv riaperto per la lettura\n");
+
+            // Simulazione della lettura dei dati (per TensorFlow Lite)
+            int num_samples = 10000;  // Supponiamo di avere 10000 campioni
+            int count = 0;
+            int *predictions = (int *)malloc(num_samples * sizeof(int));
+
+            // Inizializzazione delle metriche
+            const int input_size = sizeof(data.train_feature);
+            const int output_size = sizeof(data.prediction);
+            int predicted_label = 0;
+
+            printf("Previsioni in corso...\n");
+            // Lettura dei dati e esecuzione delle previsioni
+            for (;;) {
+                if (get_data(data_file, &data) == -1){
+                    break;
+                }
+
+                float max = 0;
+                // Copia i dati di input nel tensore di input
+                TfLiteTensorCopyFromBuffer(input_tensor, data.train_feature, input_size);
+
+                // Esegui l'interprete per ottenere le previsioni
+                TfLiteInterpreterInvoke(interpreter);
+                // Estrai l'output
+                const TfLiteTensor *output_tensor = TfLiteInterpreterGetOutputTensor(interpreter, 0);
+                // Copia i risultati delle previsioni
+                TfLiteTensorCopyToBuffer(output_tensor, data.prediction, output_size);
+
+                // Ottieni la label predetta
+                for (int i = 0; i < OUTPUT_SIZE; i++) {
+                    if (data.prediction[i] > max) {
+                        max = data.prediction[i];
+                        predicted_label = i;
                     }
-
-		    printf("Lunghezza riga ricevuta %d\n", length);
-
-                    char *buffer = (char *)malloc(length * sizeof(char));
-		    //char buffer [19600];
-                    memset(buffer, 0, sizeof(buffer));
-		    if (recv(client_fd, buffer, length, 0) < 0) {
-                        perror("read");
-                        return 1;
-                    }
-
-		    printf("%s\n\n", buffer);
-
-                    // Scrivi il contenuto del buffer nel file
-                    write(x_test_file, buffer, strlen(buffer)+1);
-                    write(x_test_file, &a_capo, 1);
-		    free(buffer);
-		    length = 0;
                 }
-                close(x_test_file);*/
-                printf("Dati ricevuti e scritti su x_test.csv\n");
+                predictions[count] = predicted_label;
+                count++;
+            }
+            
+            //file y_test.csv da salvare con le etichette predette
+            FILE *labels_file = fopen("/var/data/ml_model_prova/labels/y_test.csv", "w");
+            if(labels_file == NULL){
+                perror("Failed to open file");
+                return 1;
+            }
 
-                // Riapri il file x_test.csv per leggere i dati
-                FILE *data_file = fopen("/var/data/ml_model_prova/x_test.csv", "r");
-                if (!data_file) {
-                    perror("Failed to open file");
-                    return 1;
-                }
-                printf("File x_test.csv riaperto per la lettura\n");
+            for(int i=0; i<num_samples; i++){
+                printf("Labels %d-esima: %d\n", i, predictions[i]);
+                fprintf(labels_file, "%d\n", predictions[i]);
+            }
+            fclose(labels_file);
 
-                // Simulazione della lettura dei dati (per TensorFlow Lite)
-                int num_samples = 10000;  // Supponiamo di avere 10000 campioni
-                int count = 0;
-                int *predictions = (int *)malloc(num_samples * sizeof(int));
+            printf("Previsioni completate\n");
+            // Invia le etichette predette al client in json
+            //creazione oggetto json
+            struct json_object *json_obj = json_object_new_object();
+            struct json_object *json_predictions = json_object_new_array();
+            //popolo array Json con interi
+            for (int i = 0; i < num_samples; i++) {
+                json_object_array_add(json_predictions, json_object_new_int(predictions[i]));
+            }
+            //aggiungo array json all'oggetto principale
+            json_object_object_add(json_obj, "Labels", json_predictions);
+            //converto in stringa e lo invio
+            const char *json_str = json_object_to_json_string(json_obj);
+            // Calcola la dimensione del JSON
+            size_t json_size = strlen(json_str);
+            //Invio dimensione al client
+            send(client_fd, &json_size, sizeof(json_size), 0);
+            //invio la stringa json al client
+            send(client_fd, json_str, strlen(json_str) + 1, 0);
+            printf("Etichette inviate al client\n");
 
-                // Inizializzazione delle metriche
-                const int input_size = sizeof(data.train_feature);
-                const int output_size = sizeof(data.prediction);
-                int predicted_label = 0;
-
-                printf("Previsioni in corso...\n");
-                // Lettura dei dati e esecuzione delle previsioni
-                for (;;) {
-                    if (get_data(data_file, &data) == -1){
-                        break;
-                    }
-
-                    float max = 0;
-                    // Copia i dati di input nel tensore di input
-                    TfLiteTensorCopyFromBuffer(input_tensor, data.train_feature, input_size);
-
-                    // Esegui l'interprete per ottenere le previsioni
-                    TfLiteInterpreterInvoke(interpreter);
-                    // Estrai l'output
-                    const TfLiteTensor *output_tensor = TfLiteInterpreterGetOutputTensor(interpreter, 0);
-                    // Copia i risultati delle previsioni
-                    TfLiteTensorCopyToBuffer(output_tensor, data.prediction, output_size);
-
-                    // Ottieni la label predetta
-                    for (int i = 0; i < OUTPUT_SIZE; i++) {
-                        if (data.prediction[i] > max) {
-                            max = data.prediction[i];
-                            predicted_label = i;
-                        }
-                    }
-
-                    predictions[count] = predicted_label;
-                    count++;
-                }
-
-                for(int i=0; i<num_samples; i++){
-                    printf("Labels %d-esima: %d\n", i, predictions[i]);
-                }
-
-                printf("Previsioni completate\n");
-                // Invia le etichette predette al client in json
-                //creazione oggetto json
-                struct json_object *json_obj = json_object_new_object();
-                struct json_object *json_predictions = json_object_new_array();
-                //popolo array Json con interi
-                for (int i = 0; i < num_samples; i++) {
-                    json_object_array_add(json_predictions, json_object_new_int(predictions[i]));
-                }
-                //aggiungo array json all'oggetto principale
-                json_object_object_add(json_obj, "Labels", json_predictions);
-                //converto in stringa e lo invio
-                const char *json_str = json_object_to_json_string(json_obj);
-                // Calcola la dimensione del JSON
-                size_t json_size = strlen(json_str);
-                //Invio dimensione al client
-                send(client_fd, &json_size, sizeof(json_size), 0);
-                //invio la stringa json al client
-                send(client_fd, json_str, strlen(json_str) + 1, 0);
-                printf("Etichette inviate al client\n");
-
-                // Invia le etichette predette al controller
-                int controller_fd = socket(AF_INET, SOCK_STREAM, 0);
-                struct sockaddr_in controller_addr;
-                controller_addr.sin_family = AF_INET;
-                controller_addr.sin_port = htons(9090);  // Supponiamo che il controller ascolti sulla porta 9090
-                controller_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-                int b =  connect(controller_fd, (struct sockaddr *)&controller_addr, sizeof(controller_addr));
-                if (b < 0) {
-                    perror("Errore nella connessione al controller");
-                    return 1;
-                }
-                printf("Connessione al controller avvenuta\n");
-
-                // Invia le etichette predette al controller
-                //Invio dimensione al client
-                send(controller_fd, &json_size, sizeof(json_size), 0);
-                //invio la stringa json al client
-                send(controller_fd, json_str, strlen(json_str) + 1, 0);
-                printf("Etichette inviate al controller\n");
-                close(controller_fd);
-
-                free(predictions);
-                fclose(data_file);
-		remove("/var/data/ml_model_prova/x_test.csv");
-                // Libera la memoria dell'interprete e del modello
-                TfLiteInterpreterDelete(interpreter);
-                TfLiteInterpreterOptionsDelete(options);
-                TfLiteModelDelete(model);
+            // libera la memoria ed elimina il file x_test.csv
+            free(predictions);
+            fclose(data_file);
+            remove("/var/data/ml_model_prova/x_test.csv");
+            // Libera la memoria dell'interprete e del modello
+            TfLiteInterpreterDelete(interpreter);
+            TfLiteInterpreterOptionsDelete(options);
+            TfLiteModelDelete(model);
             // Libero risorse
             printf("Figlio TCP terminato, libero risorse e chiudo. \n");
             close(client_fd);

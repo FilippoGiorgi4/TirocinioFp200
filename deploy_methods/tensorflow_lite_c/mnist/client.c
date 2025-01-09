@@ -79,6 +79,7 @@ int main(int argc, char *argv[]) {
     printf("Connesso a server\n");
     printf("Apro file\n");
     // Apertura del file CSV
+    // lettura da file e invio delle linee
     FILE *fp = fopen(file_path, "rb");
     if (fp == NULL) {
         perror("Failed to open file");
@@ -93,38 +94,7 @@ int main(int argc, char *argv[]) {
     }
     fclose(fp);
     shutdown(sock, SHUT_WR);
-    /* lettura da file e invio delle linee*/
-    /*
-    while (leggiLinea(fd, linea) > 0) {
-        length = strlen(linea) + 1;
-	printf("%d\n", length);
-        // invio lunghezza linea e linea
-        if (send(sock, &length, sizeof(int), 0) < 0) {
- 	   if (errno == EPIPE) {
-       		 perror("Connessione chiusa dal lato remoto (EPIPE)\n");
-   	    } else if (errno == ECONNRESET) {
-       		 perror("Connessione resettata (ECONNRESET)\n");
-            } else {
-       		 perror("Errore invio lunghezza");
-   	    }
-            return 1;
-        }
-        if (send(sock, linea, length, 0) < 0) {
-            perror("Errore invio linea");
-            return 1;
-        }
-	length = 0;
-    }
-    // il file e' terminato, lo segnalo al server
-    length = -1;
-    printf("Invio fine file\n");
-    if (send(sock, &length, sizeof(length), 0) < 0) {
-        perror("write");
-        return -1;
-    }
-    printf("Fine invio");
-    close(fd);
-    */
+    
     // Ricezione delle etichette predette dal server
     // Ricezione della dimensione del JSON
     size_t json_size = 0;
