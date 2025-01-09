@@ -89,6 +89,13 @@ int main(int argc, char **argv) {
     }
     printf("Server: set opzioni socket d'ascolto ok\n");
 
+    int sndbuf, rcvbuf;
+    socklen_t optlen = sizeof(int);
+    getsockopt(server_fd, SOL_SOCKET, SO_SNDBUF, &sndbuf, &optlen);
+    getsockopt(server_fd, SOL_SOCKET, SO_RCVBUF, &rcvbuf, &optlen);
+    printf("Buffer invio: %d, Buffer ricezione: %d\n", sndbuf, rcvbuf);
+
+
     if (bind(server_fd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
         perror("bind socket d'ascolto");
         exit(3);
@@ -161,35 +168,61 @@ int main(int argc, char **argv) {
                 }
                 printf("Input tensor ottenuto\n");
 
+                char buff[8192];
+                int tot = 0, bf=0;
+                FILE* x_test_file = fopen("/var/data/ml_model_prova/x_test.csv", "wb");
+                if(x_test_file != NULL){
+                    while( (bf = recv(client_fd, buff, 8192,0))> 0 ) {
+                        tot+=bf;
+                        fwrite(buff, 1, bf, x_test_file);
+		    }
+
+                    printf("Received byte: %d\n",tot);
+                    if (bf<0)
+                    perror("Receiving");
+
+                    fclose(x_test_file);
+                } else {
+                    perror("File");
+                }
                 // Leggi il file x_test.csv inviato dal client
-                int x_test_file = open("x_test.csv", O_WRONLY | O_CREAT | O_TRUNC, 0777);
+               /* int x_test_file = open("/var/data/ml_model_prova/x_test.csv", O_WRONLY | O_CREAT | O_TRUNC, 0777);
                 if (x_test_file < 0) {
                     perror("Failed to open file");
                     return 1;
                 }
-                printf("File x_test.csv aperto correttamente\n");
+                printf("File x_test.csv aperto correttamente\n");*/
 
-                while (read(client_fd, &length, sizeof(int)) > 0) {
+                /*while (recv(client_fd, &length, sizeof(int), 0) > 0) {
                     if (length == -1) {
                         // Esco dal ciclo di gestione di questo file
                         // senza però chiudere la socket.
                         break;
                     }
 
-                    char buffer[length];
-                    if (read(client_fd, &buffer, length) < 0) {
+		    printf("Lunghezza riga ricevuta %d\n", length);
+
+                    char *buffer = (char *)malloc(length * sizeof(char));
+		    //char buffer [19600];
+                    memset(buffer, 0, sizeof(buffer));
+		    if (recv(client_fd, buffer, length, 0) < 0) {
                         perror("read");
                         return 1;
                     }
+
+		    printf("%s\n\n", buffer);
+
                     // Scrivi il contenuto del buffer nel file
-                    write(x_test_file, &buffer, length);
+                    write(x_test_file, buffer, strlen(buffer)+1);
                     write(x_test_file, &a_capo, 1);
+		    free(buffer);
+		    length = 0;
                 }
-                close(x_test_file);
+                close(x_test_file);*/
                 printf("Dati ricevuti e scritti su x_test.csv\n");
 
                 // Riapri il file x_test.csv per leggere i dati
-                FILE *data_file = fopen("x_test.csv", "r");
+                FILE *data_file = fopen("/var/data/ml_model_prova/x_test.csv", "r");
                 if (!data_file) {
                     perror("Failed to open file");
                     return 1;
@@ -256,9 +289,9 @@ int main(int argc, char **argv) {
                 // Calcola la dimensione del JSON
                 size_t json_size = strlen(json_str);
                 //Invio dimensione al client
-                write(client_fd, &json_size, sizeof(json_size));
+                send(client_fd, &json_size, sizeof(json_size), 0);
                 //invio la stringa json al client
-                write(client_fd, json_str, strlen(json_str) + 1);
+                send(client_fd, json_str, strlen(json_str) + 1, 0);
                 printf("Etichette inviate al client\n");
 
                 // Invia le etichette predette al controller
@@ -267,8 +300,8 @@ int main(int argc, char **argv) {
                 controller_addr.sin_family = AF_INET;
                 controller_addr.sin_port = htons(9090);  // Supponiamo che il controller ascolti sulla porta 9090
                 controller_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
-
-                if (connect(controller_fd, (struct sockaddr *)&controller_addr, sizeof(controller_addr)) < 0) {
+                int b =  connect(controller_fd, (struct sockaddr *)&controller_addr, sizeof(controller_addr));
+                if (b < 0) {
                     perror("Errore nella connessione al controller");
                     return 1;
                 }
@@ -276,15 +309,15 @@ int main(int argc, char **argv) {
 
                 // Invia le etichette predette al controller
                 //Invio dimensione al client
-                write(controller_fd, &json_size, sizeof(json_size));
+                send(controller_fd, &json_size, sizeof(json_size), 0);
                 //invio la stringa json al client
-                write(controller_fd, json_str, strlen(json_str) + 1);
+                send(controller_fd, json_str, strlen(json_str) + 1, 0);
                 printf("Etichette inviate al controller\n");
                 close(controller_fd);
 
                 free(predictions);
                 fclose(data_file);
-		remove("x_test.csv");
+		remove("/var/data/ml_model_prova/x_test.csv");
                 // Libera la memoria dell'interprete e del modello
                 TfLiteInterpreterDelete(interpreter);
                 TfLiteInterpreterOptionsDelete(options);

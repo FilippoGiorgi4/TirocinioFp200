@@ -121,7 +121,7 @@ int main(int argc, char *argv[]) {
 
         // Ricevere la dimensione del JSON
         size_t json_size;
-        if (read(client_fd, &json_size, sizeof(json_size)) < 0) {
+        if (recv(client_fd, &json_size, sizeof(json_size), 0) < 0) {
             perror("Failed to receive JSON size");
             close(client_fd);
             return 1;
@@ -129,7 +129,7 @@ int main(int argc, char *argv[]) {
 
         // Ricevere il JSON
         char buffer[json_size + 1];
-        ssize_t bytes_received = read(client_fd, buffer, json_size);
+        ssize_t bytes_received = recv(client_fd, buffer, json_size, 0);
         if (bytes_received < 0) {
             perror("Failed to receive JSON data");
             close(client_fd);

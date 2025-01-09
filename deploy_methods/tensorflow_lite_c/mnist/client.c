@@ -22,11 +22,13 @@
 int leggiLinea(int fd, char *linea) {
     char c;
     int  letti, i = 0;
-    while ((letti = read(fd, &c, 1) != 0) && (c != '\n')) {
+    memset(linea, 0, sizeof(char) * 19600);
+    while ((letti = read(fd, &c, 1)) > 0 && c != '\n') {
         linea[i] = c;
         i++;
     }
-    linea[i] = '\0';
+    printf("%s\n", linea);
+    linea[i]='\0';
     return letti;
 }
 
@@ -37,7 +39,8 @@ int main(int argc, char *argv[]) {
     }
 
     const char *file_path = argv[1];
-    int sock, length;
+    int sock, length, b;
+    char sendbuffer[8192];
     char linea[19600];
     struct sockaddr_in server_addr;
 
@@ -47,9 +50,15 @@ int main(int argc, char *argv[]) {
         perror("Failed to create socket");
         return 1;
     }
-
+    
+    int sndbuf, rcvbuf;
+    socklen_t optlen = sizeof(int);
+    getsockopt(sock, SOL_SOCKET, SO_SNDBUF, &sndbuf, &optlen);
+    getsockopt(sock, SOL_SOCKET, SO_RCVBUF, &rcvbuf, &optlen);
+    printf("Buffer invio: %d, Buffer ricezione: %d\n", sndbuf, rcvbuf);
+    
     // Risoluzione del nome del servizio in indirizzo IP
-    struct hostent *server = gethostbyname("deployment-mnist-service.namespace.svc.cluster.local");
+    struct hostent *server = gethostbyname("192.168.17.121");
     if (server == NULL) {
         fprintf(stderr, "ERROR: No such host\n");
         return 1;
@@ -60,7 +69,8 @@ int main(int argc, char *argv[]) {
     memcpy(&server_addr.sin_addr.s_addr, server->h_addr, server->h_length);
 
     // Connessione al server
-    if (connect(sock, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
+    b = connect(sock, (struct sockaddr *)&server_addr, sizeof(server_addr));
+    if (b < 0) {
         perror("Failed to connect to server");
         close(sock);
         return 1;
@@ -69,46 +79,61 @@ int main(int argc, char *argv[]) {
     printf("Connesso a server\n");
     printf("Apro file\n");
     // Apertura del file CSV
-    int fd = open(file_path, O_RDONLY, 0777);
-    if (fd < 0) {
+    FILE *fp = fopen(file_path, "rb");
+    if (fp == NULL) {
         perror("Failed to open file");
         close(sock);
         return 1;
     }
 
     printf("Inizio lettura\n");
+
+    while( (b = fread(sendbuffer, 1, sizeof(sendbuffer), fp))>0 ){
+        send(sock, sendbuffer, b, 0);
+    }
+    fclose(fp);
+    shutdown(sock, SHUT_WR);
     /* lettura da file e invio delle linee*/
+    /*
     while (leggiLinea(fd, linea) > 0) {
         length = strlen(linea) + 1;
+	printf("%d\n", length);
         // invio lunghezza linea e linea
-        if (write(sock, &length, sizeof(int)) < 0) {
-            perror("Errore invio lunghezza");
+        if (send(sock, &length, sizeof(int), 0) < 0) {
+ 	   if (errno == EPIPE) {
+       		 perror("Connessione chiusa dal lato remoto (EPIPE)\n");
+   	    } else if (errno == ECONNRESET) {
+       		 perror("Connessione resettata (ECONNRESET)\n");
+            } else {
+       		 perror("Errore invio lunghezza");
+   	    }
             return 1;
         }
-        if (write(sock, linea, strlen(linea) + 1) < 0) {
+        if (send(sock, linea, length, 0) < 0) {
             perror("Errore invio linea");
             return 1;
         }
+	length = 0;
     }
     // il file e' terminato, lo segnalo al server
     length = -1;
     printf("Invio fine file\n");
-    if (write(sock, &length, sizeof(int)) < 0) {
+    if (send(sock, &length, sizeof(length), 0) < 0) {
         perror("write");
         return -1;
     }
     printf("Fine invio");
     close(fd);
-
+    */
     // Ricezione delle etichette predette dal server
     // Ricezione della dimensione del JSON
     size_t json_size = 0;
-    if (read(sock, &json_size, sizeof(json_size)) < 0) {
+    if (recv(sock, &json_size, sizeof(json_size), 0) < 0) {
         perror("Error receiving size");
         return 1;
     }
     char buff[json_size];
-    if(read(sock, buff, sizeof(buff))<0){
+    if(recv(sock, buff, sizeof(buff), 0)<0){
         perror("Error receiving labels");
         return 1;
     }
