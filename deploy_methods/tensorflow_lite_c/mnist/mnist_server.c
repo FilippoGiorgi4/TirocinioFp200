@@ -236,7 +236,7 @@ int main(int argc, char **argv) {
             }
             
             //file y_test.csv da salvare con le etichette predette
-            FILE *labels_file = fopen("/var/data/ml_model_prova/labels/y_test.csv", "w");
+            FILE *labels_file = fopen("/var/data/ml_model_prova/labels/y_test.csv", "a");
             if(labels_file == NULL){
                 perror("Failed to open file");
                 return 1;
@@ -246,6 +246,7 @@ int main(int argc, char **argv) {
                 printf("Labels %d-esima: %d\n", i, predictions[i]);
                 fprintf(labels_file, "%d\n", predictions[i]);
             }
+	    fprintf(labels_file, "-1\n");
             fclose(labels_file);
 
             printf("Previsioni completate\n");

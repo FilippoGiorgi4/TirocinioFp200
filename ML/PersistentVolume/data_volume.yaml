@@ -2,6 +2,7 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: data-pv
+  namespace: crossplane-system
 spec:
   capacity:
     storage: 10Gi
