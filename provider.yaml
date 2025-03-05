@@ -1,0 +1,66 @@
+apiVersion: pkg.crossplane.io/v1 #pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-metricsprovider
+  annotations:
+    meta.crossplane.io/maintainer: Crossplane Maintainers <info@crossplane.io>
+    meta.crossplane.io/source: github.com/crossplane/provider-metricsprovider
+    meta.crossplane.io/license: Apache-2.0
+    meta.crossplane.io/description: |
+      A metricsprovider that can be used to create Crossplane providers.
+spec:
+  ignoreCrossplaneConstraints: true
+  package: docker.io/filippogiorgi4/provider-metricsprovider:v0.0.0-241.gf5e3817
+  packagePullPolicy: Always
+  revisionActivationPolicy: Automatic
+  revisionHistoryLimit: 0
+  controllerConfigRef:
+    name: debug-config
+---
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  name: debug-config
+spec:
+  serviceAccountName: crossplane-account
+  volumeMounts:
+    - name: data-volume
+      mountPath: /var/data/
+  volumes:
+    - name: data-volume
+      persistentVolumeClaim:
+        claimName: data-pvc
+  args:
+    - --debug
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: crossplane-account
+automountServiceAccountToken: false
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: crossplane-roles
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: crossplane-account
+    namespace: crossplane-system
+---
+apiVersion: metricsprovider.crossplane.io/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: provider-metricsconfig
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      name: provider-metricsprovider-credentials
+      key: apiKey
+      namespace: crossplane-system
+
