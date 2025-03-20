@@ -1,0 +1,792 @@
+Timestamp: 2025-03-11 13:58:59
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:00
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:01
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:02
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:03
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:04
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:05
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:06
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   125m         1%     8393Mi          52%       
+lserfilippi-fgiorgi-2   47m          0%     1930Mi          24%       
+lserfilippi-fgiorgi-3   51m          0%     1771Mi          22%       
+lserfilippi-fgiorgi-4   38m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:07
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:09
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:10
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:11
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:12
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:13
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:14
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:15
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:16
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:17
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:18
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:19
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:20
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:21
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   219m         2%     8396Mi          52%       
+lserfilippi-fgiorgi-2   82m          1%     1931Mi          24%       
+lserfilippi-fgiorgi-3   64m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   74m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:22
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:23
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:25
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:26
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:27
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:28
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:29
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:30
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:31
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:32
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:33
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:34
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:35
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:36
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   309m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   59m          0%     1929Mi          24%       
+lserfilippi-fgiorgi-3   42m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   41m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:37
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:38
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:40
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:41
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:42
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:43
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:44
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:45
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:46
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:47
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:48
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:49
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:50
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:51
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   277m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   238m         2%     1930Mi          24%       
+lserfilippi-fgiorgi-3   53m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   42m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:53
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:54
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:55
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:56
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:57
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:58
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 13:59:59
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:00
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:01
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:02
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:03
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:04
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:05
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:06
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   340m         4%     8401Mi          52%       
+lserfilippi-fgiorgi-2   549m         6%     1923Mi          24%       
+lserfilippi-fgiorgi-3   50m          0%     1768Mi          22%       
+lserfilippi-fgiorgi-4   48m          0%     1934Mi          24%       
+Timestamp: 2025-03-11 14:00:07
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:09
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:10
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:11
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:12
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:13
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:14
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:15
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:16
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:17
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:18
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:19
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:20
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:21
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   280m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   327m         4%     1924Mi          24%       
+lserfilippi-fgiorgi-3   49m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   39m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:23
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:24
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:25
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:26
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:27
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:28
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:29
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:30
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:31
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:32
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:33
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:34
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:35
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:36
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   310m         3%     8400Mi          52%       
+lserfilippi-fgiorgi-2   484m         6%     1924Mi          24%       
+lserfilippi-fgiorgi-3   44m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:37
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:39
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:40
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:41
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:42
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:43
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:44
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:45
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:46
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:47
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:48
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:49
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:50
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:51
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   334m         4%     8400Mi          52%       
+lserfilippi-fgiorgi-2   565m         7%     1924Mi          24%       
+lserfilippi-fgiorgi-3   58m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:00:52
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:54
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:55
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:56
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:57
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:58
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:00:59
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:00
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:01
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:02
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:03
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:04
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:05
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:06
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:07
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   249m         3%     8401Mi          52%       
+lserfilippi-fgiorgi-2   119m         1%     1925Mi          24%       
+lserfilippi-fgiorgi-3   46m          0%     1769Mi          22%       
+lserfilippi-fgiorgi-4   44m          0%     1932Mi          24%       
+Timestamp: 2025-03-11 14:01:08
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:10
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:11
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:12
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:13
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:14
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:15
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:16
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:17
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:18
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
+Timestamp: 2025-03-11 14:01:19
+NAME                    CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+lserfilippi-fgiorgi-1   213m         2%     8401Mi          52%       
+lserfilippi-fgiorgi-2   48m          0%     1925Mi          24%       
+lserfilippi-fgiorgi-3   47m          0%     1770Mi          22%       
+lserfilippi-fgiorgi-4   43m          0%     1933Mi          24%       
