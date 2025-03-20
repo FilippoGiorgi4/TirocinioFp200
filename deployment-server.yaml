@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-mnist
+  namespace: crossplane-system
+  labels:
+    app: deployment-mnist
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment-mnist
+  template:
+    metadata:
+      labels:
+        app: deployment-mnist
+    spec:
+      containers:
+        - name: ml-worker
+          image: filippogiorgi4/mnist:1.1
+          imagePullPolicy: Always
+          command: ["/usr/src/app/server"] #["sleep"]
+          args: ["/usr/src/app/model_mnist_small.tflite"] #["infinity"]
+          ports:
+            - containerPort: 30080
+          volumeMounts:
+            - mountPath: /var/data/
+              name: data-volume
+          env:
+            - name: FOLDER_PATH
+              value: /var/data/
+            - name: OUTPUT_PATH
+              value: ml_model_prova
+            - name: DATA_PATH
+              value: data.csv
+            - name: LOGGING_LEVEL
+              value: INFO
+            - name: LD_LIBRARY_PATH
+              value: /home/fgiorgi/.local/lib:$LD_LIBRARY_PATH
+      restartPolicy: Always
+      volumes:
+        - name: data-volume
+          persistentVolumeClaim:
+            claimName: data-pvc
