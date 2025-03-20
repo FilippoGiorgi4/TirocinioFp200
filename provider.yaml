@@ -10,7 +10,7 @@ metadata:
       A metricsprovider that can be used to create Crossplane providers.
 spec:
   ignoreCrossplaneConstraints: true
-  package: docker.io/filippogiorgi4/provider-metricsprovider:v0.0.0-248.g6f78d6f
+  package: docker.io/filippogiorgi4/provider-metricsprovider:v0.0.0-249.g101c716
   packagePullPolicy: Always
   revisionActivationPolicy: Automatic
   revisionHistoryLimit: 0

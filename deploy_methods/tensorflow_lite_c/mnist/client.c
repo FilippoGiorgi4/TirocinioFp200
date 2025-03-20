@@ -50,15 +50,15 @@ int main(int argc, char *argv[]) {
         perror("Failed to create socket");
         return 1;
     }
-    
+
     int sndbuf, rcvbuf;
     socklen_t optlen = sizeof(int);
     getsockopt(sock, SOL_SOCKET, SO_SNDBUF, &sndbuf, &optlen);
     getsockopt(sock, SOL_SOCKET, SO_RCVBUF, &rcvbuf, &optlen);
     printf("Buffer invio: %d, Buffer ricezione: %d\n", sndbuf, rcvbuf);
-    
+
     // Risoluzione del nome del servizio in indirizzo IP
-    struct hostent *server = gethostbyname("192.168.17.121");
+    struct hostent *server = gethostbyname("deployment-mnist-service.crossplane-system.svc.cluster.local");
     if (server == NULL) {
         fprintf(stderr, "ERROR: No such host\n");
         return 1;

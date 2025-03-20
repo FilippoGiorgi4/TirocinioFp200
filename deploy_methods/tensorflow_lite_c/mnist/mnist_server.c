@@ -121,14 +121,15 @@ int main(int argc, char **argv) {
             } else
                 exit(6);
         }
+	setenv("HOSTALIASES", "/dev/null", 1); // Disabilita la risoluzione host
         if (fork() == 0) {
-            hostTcp = gethostbyaddr((char *)&client_addr.sin_addr, sizeof(client_addr.sin_addr), AF_INET);
+           /* hostTcp = gethostbyaddr((char *)&client_addr.sin_addr, sizeof(client_addr.sin_addr), AF_INET);
             if (hostTcp == NULL) {
                 printf("client host information not found\n");
                 close(client_fd);
                 exit(6);
             } else
-                printf("Server (figlio): host client e' %s \n", hostTcp->h_name);
+                printf("Server (figlio): host client e' %s \n", hostTcp->h_name);*/
 
             // Carica il modello TensorFlow Lite
             TfLiteModel *model = TfLiteModelCreateFromFile(model_path);

@@ -1,0 +1,11 @@
+apiVersion: metrics.metricsprovider.crossplane.io/v1alpha1
+kind: Calculator
+metadata:
+  name: calculator-prova
+  namespace: crossplane-system
+spec:
+  servicePort: 30080
+  providerConfigRef:
+    name: provider-metricsconfig
+  forProvider:
+    configurableField: "defaultValue"
